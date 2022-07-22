@@ -7,6 +7,15 @@ import MovieList from '../MovieList/MovieList'
 import DetailsView from '../DetailsView/DetailsView';
 
 function App() {
+
+    // Add dispatch to for SAGA to listen
+    // User sent to DetailsView page
+    // Gets Details
+    const sendToDetailsView = () => {
+      dispatch({type: 'GET_DETAILS'})
+    }
+
+
   return (
     <div className="App">
       <h1>The Movies Saga!</h1>
