@@ -11,8 +11,10 @@ function DetailsView() {
     <>
       <h1>Movie Details</h1>
       <div>
-        <div><img src={descriptions[0].poster} /></div>
-    </div>
+        <div><h2>{descriptions[0].title}</h2></div>
+        <div><img src={descriptions[0].poster} /><span>{descriptions[0].genres}</span></div>
+        <p>{descriptions[0].description}</p>
+      </div>
     </>
   );
 }
