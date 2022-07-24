@@ -12,6 +12,10 @@
     color: black;
 }
 
+.img-style {
+    cursor: pointer;
+}
+
 .movie-title {
     font-weight: bolder;
 }

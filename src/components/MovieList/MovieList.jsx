@@ -28,9 +28,10 @@ function MovieList() {
       <section className="movies">
         {movies.map((movie) => {
           return (
-            <div className="card-style"key={movie.id}>
-              <Card >
+            <div className="card-style" key={movie.id}>
+              <Card>
                 <Card.Img
+                  className="img-style"
                   variant="top"
                   src={movie.poster}
                   onClick={(event) => imgClick(movie)}
@@ -39,8 +40,7 @@ function MovieList() {
                 <Card.Body>
                   <Card.Title className="movie-title">{movie.title}</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Genres: {movie.genres}
                   </Card.Text>
                 </Card.Body>
               </Card>
