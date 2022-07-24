@@ -1,9 +1,40 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+PROJECT NAME
 
-## Description
+Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+* App that lists a page of movies
+* Main page includes: movie poster, title, & corresponding genres
+* DetailsView page includes further details about the movie
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Duration: 4.5 hours
+
+Prerequisites
+
+* React, Redux, Node
+
+List other prerequisites here
+Installation
+
+* Open up your editor of choice and run:
+* `npm install` in the terminal
+* `npm run server`
+* in different terminal instance `npm run client` 
+
+Create a database -- details in database.sql page,
+
+The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
+
+
+* Browse main page, click on desired movie
+* By clicking on page you will be taken to the details view
+* Clicking 'Go back to Homepage' takes you back to starting page
+
+Built With
+
+* React, Redux, Axios, HTML, CSS, VSCODE
+
+Acknowledgement
+
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality. 
