@@ -1,4 +1,17 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    margin: 5em;
+}
+
+.card-style {
+    border: black 1px solid;
+    width: 18rem;
+    padding: 1em;
+    margin: .25em;
+    color: black;
+}
+
+.movie-title {
+    font-weight: bolder;
 }

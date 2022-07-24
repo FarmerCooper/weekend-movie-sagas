@@ -28,8 +28,8 @@ function MovieList() {
       <section className="movies">
         {movies.map((movie) => {
           return (
-            <div key={movie.id}>
-              <Card style={{ width: "18rem" }}>
+            <div className="card-style"key={movie.id}>
+              <Card >
                 <Card.Img
                   variant="top"
                   src={movie.poster}
@@ -37,7 +37,7 @@ function MovieList() {
                   alt={movie.title}
                 />
                 <Card.Body>
-                  <Card.Title>{movie.title}</Card.Title>
+                  <Card.Title className="movie-title">{movie.title}</Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
