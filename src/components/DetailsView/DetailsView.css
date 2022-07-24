@@ -1,0 +1,27 @@
+.img-block {
+    size: fit-content;
+    border: black 1px solid;
+    padding: 1em;
+    text-align: center;
+}
+
+.align {
+    text-align: center;
+}
+
+h1 {
+    background-color: hsla(0, 3%, 21%, 0.833);
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(4, 3, 3);
+    text-align: center;
+}
+
+.button {
+    margin: 1em;
+    white-space: nowrap;
+    display: inline-block;
+}
