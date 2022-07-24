@@ -18,9 +18,11 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div>
         <Route path="/" exact>
-          <h1>The Movies Saga!</h1>
+          <header className = "main-page">
+            The Movies Saga!
+          </header>
         </Route>
         <Route path="/" exact>
           <MovieList />

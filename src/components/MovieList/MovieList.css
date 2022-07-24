@@ -1,7 +1,11 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
-    margin: 5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    align-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .card-style {
@@ -12,8 +16,13 @@
     color: black;
 }
 
-.img-style {
+.img-style:hover {
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+h2 {
+    text-align: center;
 }
 
 .movie-title {
