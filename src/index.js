@@ -14,6 +14,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('IMG_CLICKED', fetchMovieDes);
 }
 
 function* fetchAllMovies() {
@@ -27,6 +28,18 @@ function* fetchAllMovies() {
         console.log('get all error');
     }
         
+}
+
+function* fetchMovieDes(action) {
+    // get movie's description
+    try {
+        const movieDes = yield axios.get(`/api/details/${action.payload}`);
+        console.log(`this is what we get from the server:`, movieDes.data);
+        yield put({type: 'MOVIE_DES', payload: movieDes.data});
+    }
+    catch {
+        console.log('GET movie des error')
+    }
 }
 
 // Create sagaMiddleware
@@ -52,11 +65,23 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store the movie's description
+// image poster is likely to be stored here as well
+const descriptions = (state = [], action) => {
+    switch (action.type) {
+        case 'MOVIE_DES':
+            return action.payload;
+        default: 
+            return state;
+    }
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        descriptions,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

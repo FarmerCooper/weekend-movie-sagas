@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 
@@ -8,8 +8,14 @@ function MovieList() {
     const movies = useSelector(store => store.movies);
 
     useEffect(() => {
-        dispatch({ type: 'FETCH_MOVIES' });
+        dispatch({ type: 'FETCH_MOVIES'});
     }, []);
+
+    const imgClick = (movie) => {
+
+        console.log('This image was clicked', movie.id);
+        dispatch({type: 'IMG_CLICKED', payload: movie.id});
+    }
 
     return (
         <main>
@@ -19,7 +25,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <img onClick={event => imgClick(movie)} src={movie.poster} alt={movie.title}/>
                         </div>
                     );
                 })}
