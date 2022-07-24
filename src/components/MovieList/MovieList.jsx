@@ -1,10 +1,12 @@
 import React, { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {useHistory} from 'react-router-dom'
 import './MovieList.css'
 
 function MovieList() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const movies = useSelector(store => store.movies);
 
     useEffect(() => {
@@ -15,6 +17,8 @@ function MovieList() {
 
         console.log('This image was clicked', movie.id);
         dispatch({type: 'IMG_CLICKED', payload: movie.id});
+
+        setTimeout(() => {history.push("/details")}, 25)
     }
 
     return (
