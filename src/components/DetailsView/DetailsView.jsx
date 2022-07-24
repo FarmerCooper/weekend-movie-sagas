@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import {useHistory} from 'react-router-dom'
 
 {
   /* Details for the movies will go here */
@@ -6,7 +7,13 @@ import { useSelector } from "react-redux";
 
 function DetailsView() {
   const descriptions = useSelector((store) => store.descriptions);
-    console.log('this is what descriptions is:', descriptions[0].poster);
+
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push('/');
+  }
+
   return (
     <>
       <h1>Movie Details</h1>
@@ -15,6 +22,7 @@ function DetailsView() {
         <div><img src={descriptions[0].poster} /><span>{descriptions[0].genres}</span></div>
         <p>{descriptions[0].description}</p>
       </div>
+      <button onClick={handleClick}>Go Back to Main Page</button>
     </>
   );
 }
