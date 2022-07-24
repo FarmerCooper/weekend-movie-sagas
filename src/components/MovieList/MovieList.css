@@ -1,4 +1,30 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.card-style {
+    border: black 1px solid;
+    width: 18rem;
+    padding: 1em;
+    margin: .25em;
+    color: black;
+}
+
+.img-style:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.movie-title {
+    font-weight: bolder;
 }
